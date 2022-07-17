@@ -1,7 +1,6 @@
 <ul class="list-group" style="margin-top:25px;">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
-    <li class="list-group-item">A fourth item</li>
-    <li class="list-group-item">And a fifth one</li>
+    <li  *ngFor="let category of categories" (click)="setCurrentCategory(category)"
+    [class]="getCurrentCategoryClass(category)" >{{category.categoryName}}</li>
   </ul>
+
+<!-- <h5 *ngIf="loadedCategory==false" >{{currentCategory?.categoryName}}</h5> -->
